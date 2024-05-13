@@ -16,7 +16,7 @@ First, clone the repo to a directory specified to test the assignment.
 
 Later Go to the Smee website(given in the assignment) and start a new channel to get the URL.
 
-Open your terminal or command prompt and navigate to the directory where you have downloaded the files for this application.
+Open your terminal or command prompt and navigate to the directory where you have downloaded/cloned the files for this application.
 
 Run the following command to forward webhooks to your local server:
 
@@ -28,7 +28,7 @@ Create Webhook
 
 go to the organiztion settings -> webhooks -> Add webhook
 
-in the Payload URL put the smee URL, and in the trigger events select the relevant events for the task, such as Pushes, Repositories and Teams.
+in the Payload URL put the smee Webhook Proxy URL, and in the trigger events select the relevant events for the task, such as Pushes, Repositories and Teams.
 
 Open another terminal and navigate to the server directory:
 ```bash
