@@ -11,7 +11,10 @@ pip install Flask
 ```
 
 ## Usage
-Go to the Smee website(given in the assignment) and start a new channel to get the URL.
+
+First, clone the repo to a directory specified to test the assignment.
+
+Later Go to the Smee website(given in the assignment) and start a new channel to get the URL.
 
 Open your terminal or command prompt and navigate to the directory where you have downloaded the files for this application.
 
@@ -29,7 +32,7 @@ in the Payload URL put the smee URL, and in the trigger events select the releva
 
 Open another terminal and navigate to the server directory:
 ```bash
-cd <the path where you downloaded the assignment>/server
+cd <the path where you downloaded/cloned the assignment>/server
 ```
 Run the Python script to start the server:
 ```bash
