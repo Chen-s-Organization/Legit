@@ -18,7 +18,7 @@ class GitHubWebhookApp:
                     self.handler.handle_create_team_event(payload)
                 elif payload.get('repository') and payload.get('action') == 'deleted':
                     self.handler.handle_delete_repo_event(payload)
-                return '', 200
+                return 'Success', 200
             except Exception as e:
                 print("Error processing webhook:", str(e))
                 return jsonify({'error': 'An error occurred'}), 500
