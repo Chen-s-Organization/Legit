@@ -17,6 +17,7 @@ class GitHubWebhookHandler:
             head_commit = payload.get('head_commit')
             if head_commit:
                 timestamp_str = head_commit.get('timestamp')
+                print("Timestamp:", timestamp_str)
                 if timestamp_str:
                     timestamp = datetime.strptime(timestamp_str, '%Y-%m-%dT%H:%M:%SZ')
                     if 14 <= timestamp.hour < 17:
