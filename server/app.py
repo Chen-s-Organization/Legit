@@ -19,9 +19,9 @@ class GitHubWebhookHandler:
                 timestamp_str = head_commit.get('timestamp')
                 print("Timestamp:", timestamp_str)
                 if timestamp_str:
-                    timestamp = datetime.strptime(timestamp_str, '%Y-%m-%dT%H:%M:%SZ')
+                    timestamp = datetime.strptime(timestamp_str, '%Y-%m-%dT%H:%M:%S%z')
                     if 14 <= timestamp.hour < 17:
-                        self.suspicious_behaviors.append("Pushing code between 14:00-16:00")
+                        print("Notifying security team about push event between 14:00-16:00")
         except Exception as e:
             print("Error processing push event:", str(e))
 
