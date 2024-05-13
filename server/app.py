@@ -66,9 +66,9 @@ def webhook_recived():
         event = json.loads(event)
         payload = json.loads(event.get('payload', '{}'))  # Parse payload as JSON, defaulting to empty dictionary
         print("Received payload: ", payload)
-        if payload.get('pusher'):
+        if payload.get('head_commit'):
             print("Received push event")
-            webhook_handler.handle_push_event(event)
+            webhook_handler.handle_push_event(payload)
         elif payload.get('team'):
             print("Received team event")
             webhook_handler.handle_create_team_event(payload)
