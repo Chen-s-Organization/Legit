@@ -7,44 +7,16 @@ This application detects and notifies suspicious behavior in an integrated GitHu
 To run this application, you need to have Python and Flask installed on your machine. You can install Flask using pip:
 
 ```bash
-<<<<<<< HEAD
-# pip install Flask
-
-Usage
-Go to the Smee website and start a new channel to get the URL.
-=======
 pip install Flask
 ```
 
 ## Usage
-Go to the Smee website(given in the assignment and start a new channel to get the URL.
->>>>>>> 35c79e32da0ca0d3b49d9e28f6909fd6812c811e
+Go to the Smee website(given in the assignment) and start a new channel to get the URL.
 
 Open your terminal or command prompt and navigate to the directory where you have downloaded the files for this application.
 
 Run the following command to forward webhooks to your local server:
 
-<<<<<<< HEAD
-bash
-Copy code
-smee -u https://smee.io/<your_generated_smee_code> -t http://127.0.0.1:3000/webhook
-Replace <your_generated_smee_code> with the code generated for your Smee channel.
-
-Navigate to the server directory:
-bash
-Copy code
-cd server
-Run the Python script to start the server:
-bash
-Copy code
-python main.py
-The application is now running and ready to receive webhook events.
-
-Webhook Endpoints
-/webhook: This endpoint receives webhook events from GitHub and processes them to detect suspicious behavior.
-Dependencies
-Flask: The web framework used for handling HTTP requests and responses.
-=======
 ```bash
 smee -u https://smee.io/<your_generated_smee_code> -t http://127.0.0.1:3000/webhook
 Replace <your_generated_smee_code> with the code generated for your Smee channel.
@@ -69,4 +41,3 @@ The application is now running and ready to receive webhook events.
 /webhook: This endpoint receives webhook events from GitHub and processes them to detect suspicious behavior.
 ## Dependencies
 Flask: The web framework used for handling HTTP requests and responses.
->>>>>>> 35c79e32da0ca0d3b49d9e28f6909fd6812c811e
