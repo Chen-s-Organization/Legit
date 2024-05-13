@@ -27,7 +27,7 @@ go to the organiztion settings -> webhooks -> Add webhook
 
 in the Payload URL put the smee URL, and in the trigger events select the relevant events for the task, such as Pushes, Repositories and Teams.
 
-Navigate to the server directory:
+Open another terminal and navigate to the server directory:
 ```bash
 cd <the path where you downloaded the assignment>/server
 ```
