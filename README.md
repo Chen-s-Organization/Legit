@@ -11,9 +11,12 @@ pip install Flask
 ```
 
 ## Usage
-Go to the Smee website(given in the assignment) and start a new channel to get the URL.
 
-Open your terminal or command prompt and navigate to the directory where you have downloaded the files for this application.
+First, clone the repo to a directory specified to test the assignment.
+
+Later Go to the Smee website(given in the assignment) and start a new channel to get the URL.
+
+Open your terminal or command prompt and navigate to the directory where you have downloaded/cloned the files for this application.
 
 Run the following command to forward webhooks to your local server:
 
@@ -25,11 +28,11 @@ Create Webhook
 
 go to the organiztion settings -> webhooks -> Add webhook
 
-in the Payload URL put the smee URL, and in the trigger events select the relevant events for the task, such as Pushes, Repositories and Teams.
+in the Payload URL put the smee Webhook Proxy URL, and in the trigger events select the relevant events for the task, such as Pushes, Repositories and Teams.
 
-Navigate to the server directory:
+Open another terminal and navigate to the server directory:
 ```bash
-cd <the path where you downloaded the assignment>/server
+cd <the path where you downloaded/cloned the assignment>/server
 ```
 Run the Python script to start the server:
 ```bash
