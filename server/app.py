@@ -20,7 +20,7 @@ class GitHubWebhookHandler:
                 print("Timestamp:", timestamp_str)
                 if timestamp_str:
                     timestamp = datetime.strptime(timestamp_str, '%Y-%m-%dT%H:%M:%S%z')
-                    if 14 <= timestamp.hour < 17:
+                    if 14 <= timestamp.hour < 16:
                         print("Notifying security team about push event between 14:00-16:00")
         except Exception as e:
             print("Error processing push event:", str(e))
