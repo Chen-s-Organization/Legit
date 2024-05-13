@@ -12,6 +12,8 @@ class GitHubWebhookApp:
                 event = request.get_data()
                 event = json.loads(event)
                 payload = json.loads(event.get('payload', '{}'))
+
+                # checking if the payload contains the keys beneath to determine the event type
                 if payload.get('head_commit'):
                     self.handler.handle_push_code_event(payload)
                 elif payload.get('team') and payload.get('action') == 'created':
@@ -19,6 +21,7 @@ class GitHubWebhookApp:
                 elif payload.get('repository') and payload.get('action') == 'deleted':
                     self.handler.handle_delete_repo_event(payload)
                 return 'Success', 200
+            
             except Exception as e:
                 print("Error processing webhook:", str(e))
                 return jsonify({'error': 'An error occurred'}), 500
