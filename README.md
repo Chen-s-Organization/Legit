@@ -11,7 +11,7 @@ pip install Flask
 ```
 
 ## Usage
-Go to the Smee website and start a new channel to get the URL.
+Go to the Smee website(given in the assignment and start a new channel to get the URL.
 
 Open your terminal or command prompt and navigate to the directory where you have downloaded the files for this application.
 
