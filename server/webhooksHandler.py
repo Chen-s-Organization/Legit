@@ -26,9 +26,9 @@ class GitHubWebhookHandler:
     def handle_delete_repo_event(self, payload):
         try:
             repository_name = payload.get('repository').get('name')
-            deleted_at_in_datetime = datetime.strptime(datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ'), '%Y-%m-%dT%H:%M:%SZ')
-            created_at_in_datetime = datetime.strptime(payload.get('repository').get('created_at'), '%Y-%m-%dT%H:%M:%SZ')
-            if (deleted_at_in_datetime - created_at_in_datetime).total_seconds() < 600:
+            deleted_at = datetime.strptime(datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ'), '%Y-%m-%dT%H:%M:%SZ')
+            created_at = datetime.strptime(payload.get('repository').get('created_at'), '%Y-%m-%dT%H:%M:%SZ')
+            if (deleted_at - created_at).total_seconds() < 600:
                 self.notify_about_suspicious_behavior(suspicious_behavior_message="Creating and deleting a repository within 10 minutes, the repository name is: " + repository_name)
         except Exception as e:
             print("Error processing repository event:", str(e))
