@@ -12,7 +12,6 @@ class GitHubWebhookHandler:
                         self.notify_about_suspicious_behavior(suspicious_behavior_message="Push event occurred between 14:00-16:00")
         except Exception as e:
             print("Error processing push event:", str(e))
-            print("Payload:", payload)
             raise e
 
     def handle_create_team_event(self, payload):
