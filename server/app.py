@@ -70,10 +70,8 @@ def webhook_recived():
             print("Received push event")
             webhook_handler.handle_push_event(payload)
         elif payload.get('team'):
-            print("Received team event")
             webhook_handler.handle_create_team_event(payload)
         elif payload.get('repository') and payload.get('action') == 'deleted':
-            print("Received repository deleted event")
             webhook_handler.handle_create_delete_repo_event(payload)
         webhook_handler.notify_suspicious_behavior()
         return '', 200
